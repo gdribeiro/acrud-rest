@@ -22,21 +22,6 @@ public class TourService {
         this.tourPackageRepository = tourPackageRepository;
     }
 
-    /**
-     * Create a new Tour Object and persist it to the Database.
-     *
-     * @param title title
-     * @param description description
-     * @param blurb blurb
-     * @param price price
-     * @param duration duration
-     * @param bullets comma-separated bullets
-     * @param keywords keywords
-     * @param tourPackageName tour package name
-     * @param difficulty difficulty
-     * @param region region
-     * @return Tour Entity
-     */
     public Tour createTour(String title, String description, String blurb, Integer price,
                            String duration, String bullets,
                            String keywords, String tourPackageName, Difficulty difficulty, Region region ) {
@@ -61,13 +46,7 @@ public class TourService {
         );
     }
 
-    /**
-     * Calculate the number of Tours in the Database.
-     *
-     * @return the total.
-     */
     public long total() {
-
         return tourRepository.count();
     }
 
